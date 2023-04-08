@@ -1,13 +1,9 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import HomeSection from '@/components/HomeSection'
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello</h1>
+    <main className="mt-24 mx-auto max-w-3xl px-4 dark:bg-stone-900 sm:px-6 md:max-w-5xl" >
+      <HomeSection />
     </main>
   )
 }

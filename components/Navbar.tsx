@@ -35,9 +35,11 @@ const Navbar =() => {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3">
-            <div className="md:py-5 md:block">
-              <h2 className="text-2xl font-bold">William Hobson</h2>
-            </div>
+            <Link to="home" className="cursor-pointer">
+              <div className="md:py-5 md:block">
+                <h2 className="text-2xl font-bold">William Hobson</h2>
+              </div>
+            </Link>
             <div className="md:hidden">
               <button onClick={() => setNavbar(!navbar)} > 
                 {navbar ? <IoMdClose size={25} /> : <IoMdMenu size={25} />}
@@ -54,7 +56,7 @@ const Navbar =() => {
                     key={idx}
                     to={item.page}
                     className={
-                      "text-white block lg:inline-block text-white hover:text-neutral-500 dark:text-neutral-100"
+                      "text-white block cursor-pointer lg:inline-block hover:text-neutral-500 dark:text-neutral-100"
                     }
                     activeClass="active"
                     spy={true}
@@ -66,12 +68,12 @@ const Navbar =() => {
                 )
               })}
               {currentTheme === "dark" ?(
-                <button onClick={() => setTheme("light")} className="bg-slate-100 p-2 rounded-xl">
+                <button onClick={() => setTheme("light")} className="bg-slate-100 p-2 rounded-xl" aria-label="light mode">
                   <RiSunLine size={20} color="black"/>
                 </button>
               ) : (
-                <button onClick={() => setTheme("dark")} className="bg-slate-100 p-2 rounded-xl">
-                  <RiMoonFill size={20} color="black"/>
+                <button onClick={() => setTheme("dark")} className="bg-slate-100 p-2 rounded-xl" aria-label="dark mode">
+                  <RiMoonFill size={20} color="black" />
                 </button>
               )
               }
