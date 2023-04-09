@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Link } from 'react-scroll'
 import { HiArrowDown } from 'react-icons/hi'
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
 
 const HomeSection = () => {
   return (
@@ -23,18 +24,30 @@ const HomeSection = () => {
             <span className="font-semibold text-lime-800">accessible {" "}</span>
             apps that anyone can use.
           </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-lime-800 rounded shadow cursor-pointer hover:bg-teal-700"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            aria-label="Link to project section"
-          >
-            Projects
-          </Link>
+          <div className='flex flex-col items-center justify-center space-y-4 md:flex-row md:space-x-6 md:space-y-0 md:justify-around'>
+            <Link
+              to="projects"
+              className="text-neutral-100 font-semibold px-6 py-2 bg-lime-800 rounded shadow cursor-pointer hover:bg-teal-700"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              aria-label="Link to project section"
+            >
+              Projects
+            </Link>
+            <a href="https://www.github.com/willhobson85" rel='noreferrer' target="_blank">
+              <button className="text-neutral-100 font-semibold px-6 py-2 bg-lime-800 rounded shadow cursor-pointer hover:bg-teal-700">
+                GitHub
+              </button>
+            </a>
+            <a href="https://www.linkedin.com/in/the-william-hobson/" rel="noreferrer" target="_blank">
+            <button className="text-neutral-100 font-semibold px-6 py-2 bg-lime-800 rounded shadow cursor-pointer hover:bg-teal-700">
+                LinkedIn
+              </button>
+            </a>
+          </div>
         </div>
       </div>
       <div className="mt-5 flex flex-row justify-center">
