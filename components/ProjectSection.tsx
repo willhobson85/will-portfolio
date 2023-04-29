@@ -6,6 +6,13 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
+    name: "Omnifood",
+    description: "I love responsive design, so after making my portfolio responsive, I decided that I wanted to learn more about it. I built Omnifood to be fully responsive, and practice design principles.",
+    image: "/Omnifood.gif",
+    github: "https://github.com/willhobson85/Omnifood",
+    link: "https://omnifood-willhobson85.netlify.app/",
+  },
+  {
     name: "Simple Note App",
     description: "I wanted to learn to use Material-UI, so I built a simple note app. This app uses a local server to store data.",
     image: "/Material-UI-1.png",
